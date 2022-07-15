@@ -1,0 +1,16 @@
+Actions: Filter, edit entry, save entry
+Issue: Entry before edit is not taken from the table, causing it to have double entries
+Solved: Removed change listener in datepicker, added it on the "from" date instead.
+-----
+Actions: add entry, edit, save
+Issue: entry id is not saved
+To: get entry id before adding it to table
+Solved
+-----
+Action: Edit to kilo value
+Issue: Did not recalculate the net value
+Solved
+-----
+Action: Record Reject record
+Issue: "Reject" not recorded in table
+Solved

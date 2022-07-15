@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="272.0" prefWidth="267.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sb_business.SearchSupplierController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="267.0" spacing="10.0">
+         <children>
+            <Label text="Search Supplier">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <HBox spacing="3.0">
+               <children>
+                  <TextField fx:id="search_fld" prefHeight="26.0" prefWidth="211.0" promptText="Enter name or ID here" />
+                  <Button mnemonicParsing="false" onAction="#searchSupplier" prefHeight="26.0" prefWidth="75.0" text="Search" />
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <ListView fx:id="resultList" prefHeight="200.0" prefWidth="200.0" />
+                  <HBox spacing="3.0">
+                     <children>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#showAll" prefWidth="38.0" text="All" />
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#addSupplier" prefWidth="38.0" text="Add" />
+                        <Button fx:id="edit_btn" cancelButton="true" mnemonicParsing="false" onAction="#editSupplier" text="Edit" />
+                        <Button fx:id="delete_btn" cancelButton="true" mnemonicParsing="false" onAction="#deleteSupplier" text="Delete" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="3.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="TOP_RIGHT" spacing="3.0">
+               <children>
+                  <Button fx:id="choose_btn" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#chooseSupplier" text="Choose" />
+                  <Button fx:id="cancel_btn" cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>
